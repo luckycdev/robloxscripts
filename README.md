@@ -16,4 +16,4 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscrip
 ```
 ![](https://i.imgur.com/JjLWg5v.png)<br>
 ![](https://i.imgur.com/mipPPwG.png)<br>
-![](https://i.imgur.com/AbOjhvr.png)<br>
+![](https://i.imgur.com/paUfuXY.png)<br>
