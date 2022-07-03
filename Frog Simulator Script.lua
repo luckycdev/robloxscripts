@@ -28,6 +28,7 @@ end)
             spawn(function()
                 while _G.autofarmFrogs == true do
                     game:GetService("ReplicatedStorage").NetActivation:FireServer()
+                    wait(0.5)
                     wait()
                 end
             end)
@@ -45,7 +46,7 @@ MainSection:NewToggle("Auto sell", "Automatically sell your frogs", function(sta
         spawn(function()
             while _G.autoSell == true do
                 game:GetService("ReplicatedStorage").Sell:FireServer()
-                wait(1)
+                wait(3)
                 wait()
             end
         end)
@@ -56,12 +57,21 @@ MainSection:NewToggle("Auto sell", "Automatically sell your frogs", function(sta
     end
 end)
 --GEMS
-MainSection:NewToggle("Autofarm gems", "Autofarm gems", function(state)
+MainSection:NewToggle("Autofarm gems (wait for stop)", "Autofarm gems (wait for stop)", function(state)
     if state then
         print("Now autofarming gems")
         _G.autofarmGems = true
         spawn(function()
-            while _G.autofarmGems == true do
+        while _G.autofarmGems == true do
+            for i, v in pairs(workspace.Gems:GetChildren()) do
+                if v.Name == 'Gem1' then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                    wait(0.1)
+    
+                elseif v.Name == 'Gem2' then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+                wait(0.1)
+                end
                 -- -1051, 32, -1207 location of gem box
                 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
                 local location = CFrame.new(-1051, 32, -1207)
@@ -69,15 +79,158 @@ MainSection:NewToggle("Autofarm gems", "Autofarm gems", function(state)
                 --jump yayayayay
                 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
                 pl.CFrame = location
-                
+                wait(0.2)
+                wait()
+                end
+                end
+        end)
+    --stop
+    else
+        print("Stopped autofarming gems")
+        _G.autofarmGems = false
+    end
+    end) 
+--EGGS 9MIL
+MainSection:NewToggle("Autofarm pets(9MIL/3SEC)", "Automatically open pet eggs (9MIL PER)", function(state)
+    if state then
+        print("Now autofarming pets (9mil)")
+        _G.autofarmPets9mil = true
+        spawn(function()
+            while _G.autofarmPets9mil == true do
+                local args = {
+                    [1] = "Egg11"
+                }game:GetService("ReplicatedStorage").Buy3Egg:FireServer(unpack(args))                
+                wait(3)
                 wait()
             end
         end)
         --stop
     else
-        print("Stopped autofarming gems")
-        _G.autofarmGems = false
+        print("Stopped autofarming pets (9mil)")
+        _G.autofarmPets9mil = false
     end
+end)
+--EGGS 30MIL
+MainSection:NewToggle("Autofarm pets(30MIL/3SEC)", "Automatically open pet eggs (30MIL PER)", function(state)
+    if state then
+        print("Now autofarming pets (30mil)")
+        _G.autofarmPets30mil = true
+        spawn(function()
+            while _G.autofarmPets30mil == true do
+                local args = {
+                    [1] = "Egg15"
+                }game:GetService("ReplicatedStorage").Buy3Egg:FireServer(unpack(args))                
+                wait(3)
+                wait()
+            end
+        end)
+        --stop
+    else
+        print("Stopped autofarming pets (30mil)")
+        _G.autofarmPets30mil = false
+    end
+end)
+--EGGS 150MIL
+MainSection:NewToggle("Autofarm pets(150MIL/3SEC)", "Automatically open pet eggs (150MIL PER)", function(state)
+    if state then
+        print("Now autofarming pets (150mil)")
+        _G.autofarmPets150mil = true
+        spawn(function()
+            while _G.autofarmPets150mil == true do
+                local args = {
+                    [1] = "Egg20"
+                }game:GetService("ReplicatedStorage").Buy3Egg:FireServer(unpack(args))                
+                wait(3)
+                wait()
+            end
+        end)
+        --stop
+    else
+        print("Stopped autofarming pets (150mil)")
+        _G.autofarmPets150mil = false
+    end
+end)
+--REBIRTH
+MainSection:NewToggle("Auto rebirth", "Automatically rebirth when you can", function(state)
+    if state then
+        print("Now automatically rebirthing")
+        _G.autoRebirth = true
+        spawn(function()
+            while _G.autoRebirth == true do
+                game:GetService("ReplicatedStorage").Rebirth:FireServer()         
+                wait(10)
+                wait()
+            end
+        end)
+        --stop
+    else
+        print("Stopped automatically rebirthing")
+        _G.autoRebirth = false
+    end
+end)
+--CHESTS
+MainSection:NewButton("Redeem all chests", "Redeems all chests", function()
+    local args = {
+        [1] = "Chest1"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    local args = {
+        [1] = "Chest2"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    local args = {
+        [1] = "Chest3"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    local args = {
+        [1] = "Chest4"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    local args = {
+        [1] = "Chest5"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    local args = {
+        [1] = "Chest6"
+    }
+    game:GetService("ReplicatedStorage").Chests:FireServer(unpack(args))
+    print("Redeemed all chests")
+end)
+--CODES
+MainSection:NewButton("Redeem all codes", "Redeems all codes", function()
+    local args = {
+        [1] = "HEART"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    local args = {
+        [1] = "STAR"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    local args = {
+        [1] = "POISON"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))   
+    local args = {
+        [1] = "500"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))     
+    local args = {
+        [1] = "COTTON CANDY"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    local args = {
+        [1] = "WHITE DRAGON"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    local args = {
+        [1] = "BAT"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    local args = {
+        [1] = "ORB"
+    }
+    game:GetService("ReplicatedStorage").Redeem:FireServer(unpack(args))    
+    print("Redeemed all codes")
 end)
 
     --UNIVERSAL
