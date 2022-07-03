@@ -12,7 +12,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscrip
 punch a brick wall simulator script
 ```lua
 -- https://www.roblox.com/games/9662949425/Punch-a-brick-wall-simulator
-loadstring(game:GttpGet('https://raw.githubusercontent.com/luckycdev/robloxscripts/main/punchabrickwallsimulatorscript.lua',true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscripts/main/punchabrickwallsimulatorscript.lua',true))()
 ```
 ![](https://i.imgur.com/JjLWg5v.png)<br>
 ![](https://i.imgur.com/mipPPwG.png)<br>
