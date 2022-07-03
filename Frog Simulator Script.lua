@@ -28,7 +28,7 @@ end)
             spawn(function()
                 while _G.autofarmFrogs == true do
                     game:GetService("ReplicatedStorage").NetActivation:FireServer()
-                    wait(0.5)
+                    wait(0.01)
                     wait()
                 end
             end)
