@@ -19,6 +19,11 @@ end)
     local MainSection = Main:NewSection("Game")
     MainSection:NewLabel("AntiAFK should be on btw. if not just use")
     MainSection:NewLabel("infinite yield ;antiafk it should work")
+--REJOIN
+	MainSection:NewButton("Rejoin", "rejoins the server incase rebirth broke", function()
+	game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+	print("rejoined")
+	end)
 --INF MONEY
     MainSection:NewButton("Infinite money", "Gives you infinite money", function()
         local args = {
