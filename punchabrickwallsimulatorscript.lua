@@ -253,7 +253,7 @@ text.BorderColor3 = Color3.fromRGB(255, 0, 0)
 text.BorderSizePixel = 0
 text.Size = UDim2.new(0, 577, 0, 117)
 text.Font = Enum.Font.SourceSans
-text.Text = "Game is not Frog Simulator. Script did not run "
+text.Text = "Game is not Punch a brick wall simulator. Script did not run "
 text.TextColor3 = Color3.fromRGB(255, 255, 255)
 text.TextSize = 31.000
 
@@ -265,7 +265,7 @@ errorquestion.BorderSizePixel = 0
 errorquestion.Position = UDim2.new(0.24783361, 0, 0.234635338, 0)
 errorquestion.Size = UDim2.new(0, 291, 0, 117)
 errorquestion.Font = Enum.Font.SourceSans
-errorquestion.Text = "If this is an error and you are on 5598577415 then dm lucky#9919"
+errorquestion.Text = "If this is an error and you are on 9662949425 then dm lucky#9919"
 errorquestion.TextColor3 = Color3.fromRGB(255, 255, 255)
 errorquestion.TextScaled = true
 errorquestion.TextSize = 34.000
