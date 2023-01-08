@@ -1,7 +1,12 @@
 if game.PlaceId == 5598577415 then
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 	local Window = Library.CreateLib("Frog Simulator Script by lucky#9919", "Ocean")
-    
+        --send notification thingy :)
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Enabled Frog Simulator Script",
+            Text = "Enabled Frog Simulator Script by lucky#9919",
+            Duration = 4,
+        })
     _G.antiAFK = true
 
         --antiAFK credit: https://www.reddit.com/r/ROBLOXExploiting/comments/kdpuov/comment/gfzp16y/?utm_source=share&utm_medium=web2x&context=3
@@ -16,7 +21,7 @@ end)
     
     --MAIN
     local Main = Window:NewTab("Main")
-    local MainSection = Main:NewSection("Autofarms")
+    local MainSection = Main:NewSection("join discord.gg/nAEtSVbcKx")
     MainSection:NewLabel("AntiAFK should be on btw. if not just use")
     MainSection:NewLabel("infinite yield ;antiafk it should work")
 
@@ -235,8 +240,14 @@ end)
 
     --UNIVERSAL
     local Universal = Window:NewTab("Universal")
-    local UniversalSection = Universal:NewSection("Universal")    
+    local UniversalSection = Universal:NewSection("join discord.gg/nAEtSVbcKx")    
     --speed
+--INFINITE YIELD ADMIN
+UniversalSection:NewButton("Infinite Yield (Admin Commands)", "Admin commands using Infinite Yield", function()
+    print("Activated Infinite Yield")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
     UniversalSection:NewSlider("Walkspeed", "Changes your walkspeed (default:16)", 500, 16, function(speedset)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedset
         print("changed walkspeed to ", speedset)
@@ -254,10 +265,9 @@ end)
     end)
 
 --infjump
-UniversalSection:NewButton("Infinite Jump press F to toggle", "Infinitely jump (press F to toggle)", function()
+UniversalSection:NewButton("Infinite Jump press F to toggle", "press f(by Chaosxtp, 0x 59, and Vzurxy)", function()
     print("Now infinite jumping")
 -- //~ F to toggle ~\\ --
-print("started the infinite jump script")
 _G.infinjump = true
 
 local Player = game:GetService("Players").LocalPlayer
