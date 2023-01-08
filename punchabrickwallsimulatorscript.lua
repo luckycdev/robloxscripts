@@ -1,3 +1,12 @@
+--https://www.roblox.com/games/9662949425/Punch-a-brick-wall-simulator
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscripts/main/punchabrickwallsimulatorscript.lua',true))()
+--INIT
+    --send notification thingy :)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Enabled Punch A Brick Wall Simulator Script",
+        Text = "Enabled Punch A Brick Wall Simulator Script",
+        Duration = 4,
+    })
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local text = Instance.new("TextLabel")

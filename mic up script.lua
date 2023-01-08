@@ -1,3 +1,5 @@
+--https://www.roblox.com/games/6884319169/MIC-UP
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscripts/main/mic%20up%20script.lua',true))()
 --INIT
 if game.PlaceId == 6884319169 then
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()

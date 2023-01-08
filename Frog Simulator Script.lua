@@ -1,3 +1,6 @@
+-- https://www.roblox.com/games/5598577415/FREE-PET-Frog-Simulator
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/luckycdev/robloxscripts/main/Frog%20Simulator%20Script.lua',true))()
+--INIT
 if game.PlaceId == 5598577415 then
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 	local Window = Library.CreateLib("Frog Simulator Script by lucky#9919", "Ocean")
